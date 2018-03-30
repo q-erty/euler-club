@@ -5,6 +5,7 @@ import math
 import time
 
 def getPrimeFactors(n):
+  if n == 1: return []
   if n % 2 == 0: return getPrimeFactors(n // 2) + [2]
   for i in range(3, math.floor(math.sqrt(n)), 2):
     if n % i == 0:
